@@ -1,5 +1,5 @@
 import time
-import PyMata
+from PyMata.pymata import PyMata
 
 
 #Initialize Arduino using port name
