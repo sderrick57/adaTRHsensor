@@ -1,5 +1,5 @@
 import serial
-ser = serial.Serial('/dev/ttyUSB2')
+ser = serial.Serial('/dev/ttyUSB1')
 
 serR = ser.readline()
 
