@@ -24,5 +24,12 @@ while True:
 	if serlog > 100:
 			break
 
+logT = map(int, logT)
+logH = map(int, logH)
+
+avgT = sum(logT) / len(logT)
+avgH = sum(logH) / len(logH)
 print(logT)
+print(avgT)
 print(logH)
+print(avgH)
