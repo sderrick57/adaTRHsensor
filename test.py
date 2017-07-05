@@ -21,7 +21,7 @@ while True:
 
 	serlog = serlog + 1
 
-	if serlog > 200:
+	if serlog > 100:
 			break
 
 print(logT)
