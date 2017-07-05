@@ -1,5 +1,4 @@
 import serial
-import threading
 ser = serial.Serial('/dev/ttyUSB2')
 
 serR = ser.readline()
