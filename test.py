@@ -8,12 +8,12 @@ serlog = 0
 while serlog < 100:
 
 	if serR.startswith('Temp: ') is True:
-		logT = []
+		logT = ()
 		serR = serR[-7:-2]
 		logT.append(serR)
 
 	if serR.startswith('Hum: ') is True:
-		logH = []
+		logH = ()
 		serR = serR[-7:-2]
 		logH.append(serR)
 
