@@ -7,14 +7,10 @@ serlog = 0
 
 while True:
 
-	serR = ser.readline()
-
 	if serR.startswith('Temp: ') is True:
 		logT = []
 		serR = serR[-7:-2]
 		logT.append(serR)
-
-	serR = ser.readline()
 
 	if serR.startswith('Hum: ') is True:
 		logH = []
@@ -25,7 +21,7 @@ while True:
 
 	serlog = serlog + 1
 
-	if serlog > 201:
+	if serlog > 200:
 			break
 
 print(logT)
