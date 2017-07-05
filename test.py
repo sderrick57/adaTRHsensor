@@ -4,13 +4,27 @@ ser = serial.Serial('/dev/ttyUSB2')
 
 serR = ser.readline()
 
-if serR.startswith('Temp: ') is True:
-	logT = []
-	logT.append(serR)
+serlog = 0
 
-if serR.startswith('Hum: ') is True:
-	logH = []
-	logH.append(serR)
+while True:
+	if serR.startswith('Temp: ') is True:
+		logT = []
+		serR = serR[-5:-4]
+		logT.append(serR)
+
+	serR = ser.readline()
+
+	if serR.startswith('Hum: ') is True:
+		logH = []
+		serR = serR[-4:-4]
+		logH.append(serR)
+
+	serR = ser.readline()
+
+	serlog = serlog + 1
+
+	if serlog > 201:
+			break
 
 print(logT)
 print(logH)
