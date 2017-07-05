@@ -7,16 +7,19 @@ serR = ser.readline()
 serlog = 0
 
 while True:
+
+	serR = ser.readline()
+
 	if serR.startswith('Temp: ') is True:
 		logT = []
-		serR = serR[-5:-4]
+		serR = serR[-7:-2]
 		logT.append(serR)
 
 	serR = ser.readline()
 
 	if serR.startswith('Hum: ') is True:
 		logH = []
-		serR = serR[-4:-4]
+		serR = serR[-7:-2]
 		logH.append(serR)
 
 	serR = ser.readline()
