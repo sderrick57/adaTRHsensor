@@ -6,7 +6,7 @@ serlog = []
 def serthread(cx):
 	global serlog
     while True:
-        if len(serlog) > 1000:
+    	if len(serlog) > 1000:
             serlog.pop(-1)
         try:
             s = cx.readline()
