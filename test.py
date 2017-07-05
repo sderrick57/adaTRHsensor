@@ -5,7 +5,7 @@ serR = ser.readline()
 
 serlog = 0
 
-while True:
+while serlog < 100:
 
 	if serR.startswith('Temp: ') is True:
 		logT = []
@@ -20,9 +20,6 @@ while True:
 	serR = ser.readline()
 
 	serlog = serlog + 1
-
-	if serlog > 100:
-			break
 
 logT = map(float, logT)
 logH = map(float, logH)
