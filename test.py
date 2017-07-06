@@ -9,12 +9,12 @@ while serlog < 100:
 
 	if serR.startswith('Temp: ') is True:
 		logT = []
-		serR = serR[-7:-2]
+		serR = serR[6:-2]
 		logT.append(serR)
 
 	if serR.startswith('Hum: ') is True:
 		logH = []
-		serR = serR[-7:-2]
+		serR = serR[5:-2]
 		logH.append(serR)
 
 	serR = ser.readline()
