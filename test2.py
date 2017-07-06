@@ -12,7 +12,7 @@ def serthread(cx):
  								s = cx.readline()
 								serlog.insert(0,s)
 				except:
-							break
+						break
 		print('comms closed')
 
 t = threading.Thread(target=serthread, args=(ser,))
